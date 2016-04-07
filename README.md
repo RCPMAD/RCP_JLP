@@ -13,4 +13,3 @@ Features
 - Can be executed from the command line interface. It is portable so it can be executed from any external flash drive. It does not come with a GUI therefore it has a low memory footprint.
 - Detects and copies each user's jump list to the same location as the executable. This is done by creating a temp/username folder with the relevant username.
 - Parses automatic and custom jump list destinations. These will be saved in a CSV file in the same location as the executable. New data will be appended if the CSV is not empty.
-- When the tool reaches a more mature state it will be available on GitHub.
