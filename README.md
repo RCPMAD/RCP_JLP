@@ -1,4 +1,4 @@
-Jump List Parser (JLP)
+#Jump List Parser (JLP)
 
 NOTE: This tool will not work on Windows 7.
 
