@@ -85,9 +85,10 @@ namespace woanware
             for (int index1 = 0; index1 <= 50; index1 = index1 + 1)
             {
                 string args1 = @"(gwmi -query 'SELECT * FROM Win32_UserAccount WHERE LocalAccount=True').Name.get(" + index1 + ")";
+                string System32Path = Environment.GetEnvironmentVariable("systemroot");
                 var startInfo = new ProcessStartInfo();
                 startInfo.Arguments = args1;
-                startInfo.WorkingDirectory = "c:\\windows\\system32";
+                startInfo.WorkingDirectory = System32Path + "\\System32\\";
                 startInfo.RedirectStandardOutput = true;
                 startInfo.UseShellExecute = false;
                 startInfo.FileName = "powershell.exe";
@@ -97,8 +98,9 @@ namespace woanware
                 if (username.Contains("Exception")) { index1 = 50; }
                 if (index1 != 50)
                 {
-                    string dirC = "C:\\Users\\" + username + @"\AppData\Roaming\Microsoft\Windows\Recent\CustomDestinations";
-                    string dirA = "C:\\Users\\" + username + @"\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations";
+                    string UsersPath = Environment.GetEnvironmentVariable("systemdrive");
+                    string dirC = UsersPath + "\\Users\\" + username + @"\AppData\Roaming\Microsoft\Windows\Recent\CustomDestinations";
+                    string dirA = UsersPath + "\\Users\\" + username + @"\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations";
                     DirectoryInfo folderB = new DirectoryInfo(dirC);
                     DirectoryInfo folderA = new DirectoryInfo(dirA);
                     DirectoryInfo folderTemp = new DirectoryInfo(temp + "\\" + username);
