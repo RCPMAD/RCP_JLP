@@ -6,7 +6,6 @@ using System.IO;
 using System.Windows.Forms;
 using OpenMcdf;
 using Shellify;
-
 namespace woanware
 {
     static class Program
