@@ -4,7 +4,7 @@ NOTE: This tool will not work on Windows 7.
 
 Jump Lists are lists of recently opened items, such as files, folders, or websites, organized by yourself or the program that you use to open them. They have been around since Windows 7 and while many similar tools exist most do not support Windows 8, 8.1 and 10.
 
-Originally this tool started as a fork of JumpLister which makes heavy use of a GUI and has a larger memory footprint. Now JLP looks nothing like it as the code has been rewritten, can run from the command line and does not come with a GUI. It is also aimed at incident responders that need to triage systems quickly. JPL is written in C# and uses a set of open source libraries (OpenMCDF 2.0, Shellify and CsvHelper) that can be found on GitHub.
+Originally this tool started as a fork of JumpLister which makes heavy use of a GUI and has a larger memory footprint. Now JLP looks qiote dofferemt as a lot of code has been removed or rewritten, can run from the command line and does not come with a GUI. It is also aimed at incident responders that need to triage systems quickly. JPL is written in C# and uses a set of open source libraries (OpenMCDF 2.0, Shellify and CsvHelper) that can be found on GitHub.
 
 Features
 
