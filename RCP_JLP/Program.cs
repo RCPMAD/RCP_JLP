@@ -98,9 +98,9 @@ namespace woanware
                 if (username.Contains("Exception")) { index1 = 50; }
                 if (index1 != 50)
                 {
-                    string UsersPath = Environment.GetEnvironmentVariable("systemdrive");
-                    string dirC = UsersPath + "\\Users\\" + username + @"\AppData\Roaming\Microsoft\Windows\Recent\CustomDestinations";
-                    string dirA = UsersPath + "\\Users\\" + username + @"\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations";
+                    string UserProfile = Environment.GetEnvironmentVariable("userprofile");
+                    string dirC = UserProfile + "\\..\\" + username + @"\AppData\Roaming\Microsoft\Windows\Recent\CustomDestinations";
+                    string dirA = UserProfile + "\\..\\" + username + @"\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations";
                     DirectoryInfo folderB = new DirectoryInfo(dirC);
                     DirectoryInfo folderA = new DirectoryInfo(dirA);
                     DirectoryInfo folderTemp = new DirectoryInfo(temp + "\\" + username);
