@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -6,7 +6,9 @@ using System.IO;
 using System.Windows.Forms;
 using OpenMcdf;
 using Shellify;
-namespace woanware
+using woanware;
+
+namespace rcp_jpl
 {
     static class Program
     {
@@ -114,7 +116,7 @@ namespace woanware
                         foreach (var file1 in folderB.GetFiles("*.*Destinations-ms"))
                         {
                             string file = file1.DirectoryName.ToString() + "\\" + file1.ToString();
-                            string basename = Path.GetFileNameFromPath(file);
+                            string basename = woanware.Path.GetFileNameFromPath(file);
                             System.IO.File.Copy(file, temp + "\\" + username + "\\" + basename, true);
                         }
                     }
@@ -123,7 +125,7 @@ namespace woanware
                         foreach (var file1 in folderA.GetFiles("*.*Destinations-ms"))
                         {
                             string file = file1.DirectoryName.ToString() + "\\" + file1.ToString();
-                            string basename = Path.GetFileNameFromPath(file);
+                            string basename = woanware.Path.GetFileNameFromPath(file);
                             System.IO.File.Copy(file, temp + "\\" + username + "\\" + basename, true);
                         }
                     }
